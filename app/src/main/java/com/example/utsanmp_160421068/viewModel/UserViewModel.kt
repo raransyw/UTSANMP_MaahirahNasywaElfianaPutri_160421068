@@ -11,8 +11,10 @@ import com.android.volley.toolbox.Volley
 import com.example.utsanmp_160421068.model.Users
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import org.json.JSONObject
 
 class UserViewModel (application: Application): AndroidViewModel(application){
+    var statusLD = MutableLiveData<String>()
     var userLD = MutableLiveData<ArrayList<Users>>()
     val TAG = "volleyTag"
     private var queue: RequestQueue?=null
@@ -54,10 +56,15 @@ class UserViewModel (application: Application): AndroidViewModel(application){
             Request.Method.GET,
             url, {
 
-                val sType = object : TypeToken<List<Users>>() {}.type
-                val result = Gson().fromJson<List<Users>>(it, sType)
-                userLD.value = result as ArrayList<Users>?
+                var obj = JSONObject(it)
+                var result = obj.getString("status")
+                if (result == "success") {
+                    statusLD
+                }
+                else{
+                    statusLD
 
+                }
                 Log.d("showvolley", it)
 
             },

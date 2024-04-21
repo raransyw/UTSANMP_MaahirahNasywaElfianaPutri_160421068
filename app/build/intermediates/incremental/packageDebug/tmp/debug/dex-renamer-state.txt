@@ -1,4 +1,4 @@
-#Sun Apr 21 19:30:39 WIB 2024
+#Sun Apr 21 20:55:47 WIB 2024
 base.0=C\:\\Users\\Rara\\AndroidStudioProjects\\UTSANMP_160421068\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Rara\\AndroidStudioProjects\\UTSANMP_160421068\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Rara\\AndroidStudioProjects\\UTSANMP_160421068\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
