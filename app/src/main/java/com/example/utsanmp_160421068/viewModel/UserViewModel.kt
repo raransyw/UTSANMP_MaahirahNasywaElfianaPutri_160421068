@@ -58,13 +58,7 @@ class UserViewModel (application: Application): AndroidViewModel(application){
 
                 var obj = JSONObject(it)
                 var result = obj.getString("status")
-                if (result == "success") {
-                    statusLD
-                }
-                else{
-                    statusLD
-
-                }
+                statusLD.value = result
                 Log.d("showvolley", it)
 
             },

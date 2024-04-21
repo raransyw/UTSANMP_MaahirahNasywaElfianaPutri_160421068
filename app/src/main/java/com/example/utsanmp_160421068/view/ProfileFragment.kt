@@ -61,9 +61,9 @@ class ProfileFragment : Fragment() {
         viewModel.statusLD.observe(viewLifecycleOwner, Observer {
             var status = it
             if(it=="success"){
-                Toast.makeText(requireContext(),"success",Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),"Success to change",Toast.LENGTH_SHORT).show()
             } else{
-                Toast.makeText(requireContext(),"failed",Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),"Failed to change",Toast.LENGTH_SHORT).show()
             }
             Log.d("check",it.toString())
             }
