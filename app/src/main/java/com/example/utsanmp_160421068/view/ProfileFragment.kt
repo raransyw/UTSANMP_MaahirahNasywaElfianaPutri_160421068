@@ -53,8 +53,6 @@ class ProfileFragment : Fragment() {
             val intent = Intent(requireContext(),LoginActivity::class.java)
             startActivity(intent)
             requireActivity().finish()
-
-
         }
     }
 
