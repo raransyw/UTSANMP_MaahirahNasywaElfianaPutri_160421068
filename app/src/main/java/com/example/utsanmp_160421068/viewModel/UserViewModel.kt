@@ -43,12 +43,12 @@ class UserViewModel (application: Application): AndroidViewModel(application){
         queue?.add(stringRequest)
     }
 
-    fun updateUser(id:Int, username:String){
+    fun updateUser(id:Int, username:String, first_name: String,last_name: String,password: String){
         // bisa cari dari volley
         //query db sqLite
         //xml
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://10.0.2.2/UTSANMP/connection_updateuser.php?id=${id}&username=${username}"
+        val url = "http://10.0.2.2/UTSANMP/connection_updateuser.php?id=${id}&username=${username}&first_name=${first_name}&last_name=${last_name}&password=${password}"
 
         val stringRequest = StringRequest(
             Request.Method.GET,
