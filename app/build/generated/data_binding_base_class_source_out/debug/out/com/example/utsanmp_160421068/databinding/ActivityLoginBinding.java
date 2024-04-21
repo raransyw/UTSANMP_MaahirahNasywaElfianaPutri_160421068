@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.utsanmp_160421068.R;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final Button btnLogin;
@@ -39,7 +39,7 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final EditText txtUser;
 
-  private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnLogin,
+  private ActivityLoginBinding(@NonNull ScrollView rootView, @NonNull Button btnLogin,
       @NonNull Button btnRegist, @NonNull TextView textView2, @NonNull TextView textView3,
       @NonNull EditText txtPassword, @NonNull EditText txtUser) {
     this.rootView = rootView;
@@ -53,7 +53,7 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -114,7 +114,7 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, btnLogin, btnRegist, textView2,
+      return new ActivityLoginBinding((ScrollView) rootView, btnLogin, btnRegist, textView2,
           textView3, txtPassword, txtUser);
     }
     String missingId = rootView.getResources().getResourceName(id);

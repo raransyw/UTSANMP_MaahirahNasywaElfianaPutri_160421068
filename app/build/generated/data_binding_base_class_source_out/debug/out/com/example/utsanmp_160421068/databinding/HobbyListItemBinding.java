@@ -31,19 +31,19 @@ public final class HobbyListItemBinding implements ViewBinding {
   public final TextView txtAuthor;
 
   @NonNull
-  public final TextView txtDescDetail;
+  public final TextView txtSub;
 
   @NonNull
   public final TextView txtTitle;
 
   private HobbyListItemBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnRead,
-      @NonNull ImageView image, @NonNull TextView txtAuthor, @NonNull TextView txtDescDetail,
+      @NonNull ImageView image, @NonNull TextView txtAuthor, @NonNull TextView txtSub,
       @NonNull TextView txtTitle) {
     this.rootView = rootView;
     this.btnRead = btnRead;
     this.image = image;
     this.txtAuthor = txtAuthor;
-    this.txtDescDetail = txtDescDetail;
+    this.txtSub = txtSub;
     this.txtTitle = txtTitle;
   }
 
@@ -92,9 +92,9 @@ public final class HobbyListItemBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtDescDetail;
-      TextView txtDescDetail = ViewBindings.findChildViewById(rootView, id);
-      if (txtDescDetail == null) {
+      id = R.id.txtSub;
+      TextView txtSub = ViewBindings.findChildViewById(rootView, id);
+      if (txtSub == null) {
         break missingId;
       }
 
@@ -105,7 +105,7 @@ public final class HobbyListItemBinding implements ViewBinding {
       }
 
       return new HobbyListItemBinding((ConstraintLayout) rootView, btnRead, image, txtAuthor,
-          txtDescDetail, txtTitle);
+          txtSub, txtTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

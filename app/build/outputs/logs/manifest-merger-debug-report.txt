@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:2:1-42:12
 MERGED from [androidx.databinding:viewbinding:8.1.3] C:\Users\Rara\.gradle\caches\transforms-3\05dbcfd6012052dcde9ac3675df90815\transformed\viewbinding-8.1.3\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\Rara\.gradle\caches\transforms-3\67b13e6604a84b51fd6171e27f719c41\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\Rara\.gradle\caches\transforms-3\66edf25d4a107d127b5e3728933acd0f\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
@@ -86,8 +86,8 @@ ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\An
 	android:name
 		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:6:22-74
 application
-ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:8:5-31:19
-INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:8:5-31:19
+ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:8:5-40:19
+INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:8:5-40:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Rara\.gradle\caches\transforms-3\5893461acc03c2914c28c430dc200011\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Rara\.gradle\caches\transforms-3\5893461acc03c2914c28c430dc200011\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Rara\.gradle\caches\transforms-3\9917d83f0d4234af329fd5e671689bff\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -132,18 +132,18 @@ MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rara\.gradle\caches\
 		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:10:9-65
 	android:usesCleartextTraffic
 		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:17:9-44
-activity#com.example.utsanmp_160421068.view.LoginActivity
+activity#com.example.utsanmp_160421068.view.RegisterActivity
 ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:19:9-21:40
 	android:exported
 		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:20:13-47
-activity#com.example.utsanmp_160421068.view.MainActivity
+		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:20:13-50
+activity#com.example.utsanmp_160421068.view.LoginActivity
 ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:22:9-30:20
 	android:exported
 		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:23:13-46
+		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:23:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
@@ -154,6 +154,12 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
 		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:28:27-74
+activity#com.example.utsanmp_160421068.view.MainActivity
+ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:31:9-39:20
+	android:exported
+		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:33:13-36
+	android:name
+		ADDED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml:32:13-46
 uses-sdk
 INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Rara\AndroidStudioProjects\UTSANMP_160421068\app\src\main\AndroidManifest.xml

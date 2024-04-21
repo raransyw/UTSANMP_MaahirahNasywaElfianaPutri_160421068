@@ -23,6 +23,8 @@ import java.util.concurrent.TimeUnit
 class ReadFragment : Fragment() {
     private lateinit var viewModel: HobbyViewModel
     private lateinit var binding: FragmentReadBinding
+    private var paragraphList: MutableList<String> = mutableListOf()
+    private var currentParagraphIndex = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,19 +40,45 @@ class ReadFragment : Fragment() {
         viewModel.getHobby(idnews)
 
         observeViewModel()
-    }
-    fun observeViewModel(){
-        viewModel.hobbyLD.observe(viewLifecycleOwner, Observer {
-            var hobby = it
-            Log.d("showit", it.toString())
 
-                if(it!=null) {
-                    binding.txtTitleDetail.setText(it.title)
-                    binding.txtAuthor.setText(it.username)
-                    binding.txtDescDetail.setText(it.desc)
-                    binding.txtSubDetail.setText(it.sub)
-                    Picasso.get().load(it.image_url).into(binding.imageDetail)
-                }
+        binding.btnNext.setOnClickListener {
+            if (currentParagraphIndex < paragraphList.size - 1) {
+                currentParagraphIndex++
+                updateParagraphText()
+            }
+        }
+
+        binding.btnPrevious.setOnClickListener {
+            if (currentParagraphIndex > 0) {
+                currentParagraphIndex--
+                updateParagraphText()
+            }
+        }
+    }
+
+    private fun observeViewModel() {
+        viewModel.hobbyLD.observe(viewLifecycleOwner, Observer { hobby ->
+            hobby?.let {
+                binding.txtTitleDetail.text = it.title
+                binding.txtAuthor.text = it.username
+                binding.txtDescDetail.text = it.desc
+                binding.txtSubDetail.text = it.sub
+                Picasso.get().load(it.image_url).into(binding.imageDetail)
+
+                // Split the description into paragraphs based on "."
+                paragraphList = it.desc.toString().split(".").toMutableList()
+                // Remove empty paragraphs
+                paragraphList.removeAll { it.isBlank() }
+
+                // Display the first paragraph
+                updateParagraphText()
+            }
         })
+    }
+
+    private fun updateParagraphText() {
+        if (currentParagraphIndex >= 0 && currentParagraphIndex < paragraphList.size) {
+            binding.txtDescDetail.setText(paragraphList[currentParagraphIndex])
+        }
     }
 }

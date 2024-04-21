@@ -29,7 +29,7 @@ class HobbyAdapter(val hobbyList: ArrayList<Hobby>)
     override fun onBindViewHolder(holder: HobbyViewHolder, position: Int) {
         holder.binding.txtTitle.text = hobbyList[position].title
         holder.binding.txtAuthor.text = hobbyList[position].username
-        holder.binding.txtDescDetail.text = hobbyList[position].desc
+        holder.binding.txtSub.text = hobbyList[position].sub
         holder.binding.btnRead.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToReadFragment(hobbyList[position].id)
             Navigation.findNavController(it).navigate(action)

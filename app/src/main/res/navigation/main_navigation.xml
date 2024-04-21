@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/itemHome">
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/itemHome"
         android:name="com.example.utsanmp_160421068.view.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
@@ -23,12 +23,12 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/historyFragment"
+        android:id="@+id/itemHistory"
         android:name="com.example.utsanmp_160421068.view.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/itemProfile"
         android:name="com.example.utsanmp_160421068.view.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />

@@ -4,25 +4,60 @@ package com.example.utsanmp_160421068.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.utsanmp_160421068.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ScrollView rootView;
 
-  private FragmentProfileBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final Button btnSave;
+
+  @NonNull
+  public final Button btnSignout;
+
+  @NonNull
+  public final TextView textView2;
+
+  @NonNull
+  public final EditText txtFirst;
+
+  @NonNull
+  public final EditText txtLast;
+
+  @NonNull
+  public final EditText txtPassword;
+
+  @NonNull
+  public final EditText txtUser;
+
+  private FragmentProfileBinding(@NonNull ScrollView rootView, @NonNull Button btnSave,
+      @NonNull Button btnSignout, @NonNull TextView textView2, @NonNull EditText txtFirst,
+      @NonNull EditText txtLast, @NonNull EditText txtPassword, @NonNull EditText txtUser) {
     this.rootView = rootView;
+    this.btnSave = btnSave;
+    this.btnSignout = btnSignout;
+    this.textView2 = textView2;
+    this.txtFirst = txtFirst;
+    this.txtLast = txtLast;
+    this.txtPassword = txtPassword;
+    this.txtUser = txtUser;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -43,10 +78,56 @@ public final class FragmentProfileBinding implements ViewBinding {
 
   @NonNull
   public static FragmentProfileBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnSave;
+      Button btnSave = ViewBindings.findChildViewById(rootView, id);
+      if (btnSave == null) {
+        break missingId;
+      }
 
-    return new FragmentProfileBinding((FrameLayout) rootView);
+      id = R.id.btnSignout;
+      Button btnSignout = ViewBindings.findChildViewById(rootView, id);
+      if (btnSignout == null) {
+        break missingId;
+      }
+
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
+        break missingId;
+      }
+
+      id = R.id.txtFirst;
+      EditText txtFirst = ViewBindings.findChildViewById(rootView, id);
+      if (txtFirst == null) {
+        break missingId;
+      }
+
+      id = R.id.txtLast;
+      EditText txtLast = ViewBindings.findChildViewById(rootView, id);
+      if (txtLast == null) {
+        break missingId;
+      }
+
+      id = R.id.txtPassword;
+      EditText txtPassword = ViewBindings.findChildViewById(rootView, id);
+      if (txtPassword == null) {
+        break missingId;
+      }
+
+      id = R.id.txtUser;
+      EditText txtUser = ViewBindings.findChildViewById(rootView, id);
+      if (txtUser == null) {
+        break missingId;
+      }
+
+      return new FragmentProfileBinding((ScrollView) rootView, btnSave, btnSignout, textView2,
+          txtFirst, txtLast, txtPassword, txtUser);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

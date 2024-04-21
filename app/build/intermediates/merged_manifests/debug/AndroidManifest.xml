@@ -31,8 +31,17 @@
         android:theme="@style/Theme.UTSANMP_160421068"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.example.utsanmp_160421068.view.LoginActivity"
+            android:name="com.example.utsanmp_160421068.view.RegisterActivity"
             android:exported="false" />
+        <activity
+            android:name="com.example.utsanmp_160421068.view.LoginActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.utsanmp_160421068.view.MainActivity"
             android:exported="true" >

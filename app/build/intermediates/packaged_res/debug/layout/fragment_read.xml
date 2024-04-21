@@ -47,7 +47,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
 
             <TextView
-                android:id="@+id/txtDescDetail"
+                android:id="@+id/txtSubDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -57,14 +57,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtAuthor" />
 
             <TextView
-                android:id="@+id/txtSubDetail"
+                android:id="@+id/txtDescDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
                 android:text="TextView"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDescDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtSubDetail" />
 
             <TextView
                 android:id="@+id/txtAuthor"
@@ -80,23 +80,23 @@
                 android:id="@+id/btnNext"
                 android:layout_width="34dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="248dp"
-                android:layout_marginEnd="36dp"
+                android:layout_marginTop="232dp"
+                android:layout_marginEnd="48dp"
                 app:icon="@drawable/baseline_keyboard_arrow_right_24"
                 app:iconGravity="textTop"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtSubDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDescDetail" />
 
             <Button
                 android:id="@+id/btnPrevious"
                 android:layout_width="34dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="248dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginTop="232dp"
+                android:layout_marginEnd="20dp"
                 app:icon="@drawable/baseline_keyboard_arrow_left_24"
                 app:iconGravity="textTop"
                 app:layout_constraintEnd_toStartOf="@+id/btnNext"
-                app:layout_constraintTop_toBottomOf="@+id/txtSubDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDescDetail" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

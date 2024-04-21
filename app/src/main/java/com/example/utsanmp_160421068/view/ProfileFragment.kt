@@ -1,15 +1,15 @@
 package com.example.utsanmp_160421068.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.utsanmp_160421068.R
 import com.example.utsanmp_160421068.databinding.FragmentProfileBinding
-import com.example.utsanmp_160421068.databinding.FragmentReadBinding
-import com.example.utsanmp_160421068.viewModel.HobbyViewModel
 import com.example.utsanmp_160421068.viewModel.UserViewModel
 
 class ProfileFragment : Fragment() {
@@ -36,10 +36,30 @@ class ProfileFragment : Fragment() {
             this.first = binding.txtFirst.text.toString()
             this.last = binding.txtLast.text.toString()
             save = true
+            val sharedPreferences = requireContext().getSharedPreferences("MySharedPref", AppCompatActivity.MODE_PRIVATE)
+            val id_user = sharedPreferences.getInt("id", 0)
             viewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-            viewModel.updateUser(id,username, last,first,password)
+            viewModel.updateUser(id_user,username,first,last,password)
             observeViewModel()
+        }
+        binding.btnSignout.setOnClickListener{
+            val sharedPreferences = requireContext().getSharedPreferences("MySharedPref", AppCompatActivity.MODE_PRIVATE)
+
+            // Hapus preferensi "id"
+            val editor = sharedPreferences.edit()
+            editor.remove("id")
+            editor.apply()
+            val intent = Intent(requireContext(),LoginActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+
+
         }
     }
 
+    fun observeViewModel(){
+        viewModel.userLD.observe(viewLifecycleOwner, Observer {
+            var user = it
+            }
+        )}
 }

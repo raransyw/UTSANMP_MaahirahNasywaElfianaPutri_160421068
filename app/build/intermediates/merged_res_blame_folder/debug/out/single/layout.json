@@ -16,6 +16,10 @@
         "source": "com.example.utsanmp_160421068.app-main-50:/layout/fragment_profile.xml"
     },
     {
+        "merged": "com.example.utsanmp_160421068.app-mergeDebugResources-47:/layout/activity_register.xml",
+        "source": "com.example.utsanmp_160421068.app-main-50:/layout/activity_register.xml"
+    },
+    {
         "merged": "com.example.utsanmp_160421068.app-mergeDebugResources-47:/layout/hobby_list_item.xml",
         "source": "com.example.utsanmp_160421068.app-main-50:/layout/hobby_list_item.xml"
     },

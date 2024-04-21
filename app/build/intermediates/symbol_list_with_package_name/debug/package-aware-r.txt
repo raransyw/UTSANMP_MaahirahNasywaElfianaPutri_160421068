@@ -3027,6 +3027,7 @@ drawable baseline_home_24
 drawable baseline_keyboard_arrow_left_24
 drawable baseline_keyboard_arrow_right_24
 drawable baseline_person_24
+drawable baseline_power_settings_new_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3241,6 +3242,9 @@ id btnNext
 id btnPrevious
 id btnRead
 id btnRegist
+id btnRegister
+id btnSave
+id btnSignout
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3354,10 +3358,8 @@ id groups
 id header_title
 id hide_ime_id
 id hideable
-id historyFragment
 id home
 id homeAsUp
-id homeFragment
 id honorRequest
 id horizontal_only
 id hostFragment
@@ -3510,7 +3512,6 @@ id pin
 id position
 id postLayout
 id pressed
-id profileFragment
 id progress_circular
 id progress_horizontal
 id radio
@@ -3640,7 +3641,11 @@ id transition_transform
 id triangle
 id txtAuthor
 id txtDescDetail
+id txtEmail
+id txtFirst
+id txtLast
 id txtPassword
+id txtSub
 id txtSubDetail
 id txtTitle
 id txtTitleDetail
@@ -3785,6 +3790,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_register
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

@@ -12,6 +12,10 @@
         "source": "com.example.utsanmp_160421068.app-main-50:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "com.example.utsanmp_160421068.app-merged_res-48:/drawable_baseline_power_settings_new_24.xml.flat",
+        "source": "com.example.utsanmp_160421068.app-main-50:/drawable/baseline_power_settings_new_24.xml"
+    },
+    {
         "merged": "com.example.utsanmp_160421068.app-merged_res-48:/menu_bottom_menu.xml.flat",
         "source": "com.example.utsanmp_160421068.app-main-50:/menu/bottom_menu.xml"
     },
@@ -110,6 +114,10 @@
     {
         "merged": "com.example.utsanmp_160421068.app-merged_res-48:/drawable_ic_launcher_foreground.xml.flat",
         "source": "com.example.utsanmp_160421068.app-main-50:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.utsanmp_160421068.app-merged_res-48:/layout_activity_register.xml.flat",
+        "source": "com.example.utsanmp_160421068.app-main-50:/layout/activity_register.xml"
     },
     {
         "merged": "com.example.utsanmp_160421068.app-merged_res-48:/mipmap-hdpi_ic_launcher.webp.flat",
