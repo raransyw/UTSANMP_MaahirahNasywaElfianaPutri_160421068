@@ -3,6 +3,7 @@ package com.example.utsanmp_160421068.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -37,6 +38,7 @@ class RegisterActivity : AppCompatActivity() {
     }
     fun observeViewModel(){
         viewModel.userLD.observe(this, Observer {
+            Log.d("check",it.toString())
             for(user in it){
                 if(user.username == this.username&&user.password == this.password){
                     regist = true
