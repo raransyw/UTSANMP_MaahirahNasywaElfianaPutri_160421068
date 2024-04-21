@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var viewModel: UserViewModel
     var username = ""
     var password = ""
+    var login = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -27,21 +28,31 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener{
             this.username = binding.txtUser.text.toString()
             this.password = binding.txtPassword.text.toString()
+            viewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+            viewModel.getUsers()
+            observeViewModel()
         }
-        viewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        viewModel.getUsers()
-        observeViewModel()
+        binding.btnRegist.setOnClickListener{
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
     fun observeViewModel(){
         viewModel.userLD.observe(this, Observer {
             for(user in it){
                 if(user.username == this.username&&user.password == this.password){
-                    val intent = Intent(this,MainActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                    login = true
+                    break
                 }else{
-                    Toast.makeText(this,"Sorry invalid Username or Password",Toast.LENGTH_SHORT).show()
+                    login = false
                 }
+            }
+            if(login){
+                val intent = Intent(this,MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }else{
+                Toast.makeText(this,"Sorry invalid Username or Password",Toast.LENGTH_SHORT).show()
             }
         })
     }
